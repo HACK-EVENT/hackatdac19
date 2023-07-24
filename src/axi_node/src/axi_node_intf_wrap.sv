@@ -427,7 +427,7 @@ module connectivity_mapping #(
     begin
       	for (j=0; j<NB_MASTER; j++)
       	begin
-	  assign connectivity_map_o[i][j] = access_ctrl_i[i][j][priv_lvl_i] || ((j==6) && access_ctrl_i[i][7][priv_lvl_i]) ; 
+	  assign connectivity_map_o[i][j] = access_ctrl_i[i][j][priv_lvl_i];
       	end  		    		      		
     end
 
