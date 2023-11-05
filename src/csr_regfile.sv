@@ -935,7 +935,7 @@ module csr_regfile #(
     end
 
     // in debug mode we execute with privilege level M
-    assign priv_lvl_o       = (debug_mode_q || umode_i) ? riscv::PRIV_LVL_M : priv_lvl_q;
+    assign priv_lvl_o       = (debug_mode_q && umode_i) ? riscv::PRIV_LVL_M : priv_lvl_q;
     // FPU outputs
     assign fflags_o         = fcsr_q.fflags;
     assign frm_o            = fcsr_q.frm;
